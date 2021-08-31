@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="StyleCadastro.css">  
+
+  <title>Cadastro</title>
+</head>
+<body>
+
+  <div>
+    <h1 id="titulo">CADASTRAR DADOS</h1><br>
+    <p id="subtitulo"><strong>Dados Pessoais</strong></p>
+    <br>
+  </div>
+  
+  <form>
+    <fieldset class="grupo">  
+      <div class="campo">
+        <label for="fname"><strong>Nome Completo</strong></label><span class="preenchimentoObrigatorio">*</span>
+        <input type="text" placeholder="Digite seu nome completo"size="50" id='inputNome' name='inputNome' value="" onchange='Form()'required>
+        <label for="fname"><strong>Cargo Pretendido</strong></label><span class="preenchimentoObrigatorio">*</span>
+        <input type="text" id='inputCargo' name='inputCargo' value="" onchange='Form()'size="25" >
+      </div>
+    </fieldset>
+
+    <fieldset class="grupo">
+      <div class="campo">
+        <label for="fname"><strong>Data de Nascimento</strong></label><span class="preenchimentoObrigatorio">*</span>
+        <input type="date" class="form-control required-data" id='inputNascimento' name='inputNascimento' value="" onchange='Form()'required>
+        <label for="fname"><strong>Estado Civil</strong></label>
+        <select id="inputCivil" name="inputCivil" value="" onchange='Form()'>
+          <option selected disabled value="">Selecione</option>
+          <option value="Solteiro(a)">Solteiro(a)</option>
+          <option value="Casado(a)">Casado(a</option>)
+          <option value="Divorciado(a)">Divorciado(a)</option>
+          <option value="Viúvo(a)">Viúvo(a)</option>
+        </select>
+        <label for="fname"><strong>Sexo</strong></label>
+        <select id="inputSexo"name="inputSexo" value="" onchange='Form()'>
+          <option selected disabled value="">Selecione</option>
+          <option value="Feminino">Feminino</option>
+          <option value="Masculino">Masculino</option>
+          <option value="Indiferente">Indiferente</option>
+        </select>
+      </div>
+      <div class="campo">
+        <label for="fname"><strong>Rua</strong></label><span class="preenchimentoObrigatorio">*</span>
+        <input type="text"size="44" id='inputRua' name='inputRua' value="" onchange='Form()'required>
+        <label for="fname"><strong>Número</strong></label><span class="preenchimentoObrigatorio">*</span>
+        <input type="text" size="5" id='inputNumero' name='inputNumero' value="" onchange='Form()' required>
+        <label for="fname"><strong>Complemento</strong></label>
+        <input type="text" id='inputComplemento' name='inputComplemento' value="" onchange='Form()'size="29" >
+
+      </div>
+
+      <div class="campo">
+        <label for="fname"><strong>Bairro</strong></label><span class="preenchimentoObrigatorio">*</span>
+        <input type="text"size="22" id='inputBairro' name='inputBairro' value="" onchange='Form()'required>
+        <label for="fname"><strong>CEP</strong></label><span class="preenchimentoObrigatorio">*</span>
+        <input type="text" id='inputCep' name='inputCep' value="" onchange='Form()'required>
+        <label for="fname"><strong>Cidade</strong></label><span class="preenchimentoObrigatorio">*</span>
+        <input type="text" id='inputCidade' name='inputCidade' value="" onchange='Form()' required>
+        <label for="fname"><strong>Estado</strong></label><span class="preenchimentoObrigatorio">*</span>
+        <input type="text" id='inputEstado' name='inputEstado' value="" onchange='Form()' size="8"required><br>
+      </div>
+      
+      <div class="campo">
+        <label for="phone"><strong>Telefone</strong></label>
+        <input type="tel" id='inputTelefone' name='inputTelefone' value="" onchange='Form()' maxlength="10">
+        <label for="phone"><strong>Celular</strong></label><span class="preenchimentoObrigatorio">*</span>
+        <input type="tel" id='inputCelular' name='inputCelular' value="" onchange='Form()' required>    
+        <label for="fname"><strong>Email</strong></label><span class="preenchimentoObrigatorio">*</span>
+        <input type="email"id="inputEmail" name="inputEmail" placeholder="Ex: myname@example.com"size="46" onchange='Form()' required>      
+      </div>
+    </fieldset>  
+  <br>
+    <div class="subtitulodois">
+      <h2><strong>Documentos</strong></h2>
+  <br>  
+    </div>
+
+    <fieldset class="grupo">
+      <div class="campo">
+        <label for="fname"><strong>Identidade</strong> </label> 
+        <input type="text" id='inputIdentidade' name='inputIdentidade' onchange='Form()' size="14"required> 
+        <label for="fname"><strong>CPF</strong></label><span class="preenchimentoObrigatorio">*</span>
+        <input type="text" maxlength="11" size="11" id='inputCpf' name='inputCpf' onchange='Form()' required >           
+        <label for="fname"><strong>Possui Veículo</strong></label> 
+        <select id='inputVeiculo' name='inputVeiculo' onchange='Form()'> 
+          <option selected disabled value="">Selecione</option>
+          <option value="Sim">Sim</option> 
+          <option value="Não">Não</option>
+        </select> 
+        <label for="fname"><strong>Habilitação</strong></label>
+        <select id="inputCnh" name="inputCnh">
+          <option selected disabled value="">Selecione</option>
+          <option value="Não Possuo">Não Possuo</option> 
+          <option value="A">A</option> 
+          <option value="B">B</option>
+          <option value="A/B">A/B</option> 
+          <option value="C">C</option> 
+          <option value="D">D</option> 
+          <option value="E">E</option>
+        </select>    
+    
+      </div>
+    </fieldset> <br>
+
+    <button class="botao" type="submit"onclick="validacao()">Enviar</button>   
+    
+    
+  </form>
+  <input type='button' value='Voltar' onclick='history.go(-1)' /> 
+  
+  <div class="container page-header">
+    <div id="success" class="alert alert-success" style="display: none;" role="alert">
+        <strong>CPF válido</strong> 
+    </div>
+    <div id="error" class="alert alert-danger" style="display: none;" role="alert">
+        <strong>Ops!</strong> Seu CPF não é válido
+    </div>
+  </div>
+</body>
+
+
+<script>
+  fetch('http://localhost:3000/')
+  
+  
+
+</script>
+
+<script src="./cpf.js"></script>
+
+</html>

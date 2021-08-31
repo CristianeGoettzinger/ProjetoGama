@@ -1,0 +1,96 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #bac1cf;   
+    font-family: 'Poppins', sans-serif;    
+    
+}
+
+#titulo{
+    color: #380B61;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+#subtitulo {
+    font-size: 20px; 
+    font-family: sans-serif;    
+}
+
+.subtitulodois {
+    font-size: 12.5px; 
+    font-family: sans-serif;      
+
+}
+
+body{
+    
+    font-family: sans-serif;
+    font-size:1em;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 2%;
+    justify-content: center;
+    padding: 1px;
+    font-size: 18px; 
+    
+}
+
+fieldset.grupo .campo{
+    float:left;
+    margin-right: 1em;
+
+}
+input, select, button {
+    border-radius: 5px
+}
+
+.campo input[type="text"], .campo input[type="tel"], .campo input[type="email"], .campo input[type="date"], .campo select, .campo select option {
+    padding: 3px;
+    box-shadow: 2px 2px 2px;
+    display:inline-flexbox;
+    line-height:20px;
+}
+
+.campo select option{
+    padding-right: 1em;
+    font-weight: bold;   
+
+    
+}
+.container{
+    color:red;
+}
+.campo input:focus, .campo select:focus{
+    background: #E0E0F8;
+}
+input[type="button"] {
+    position: relative;
+    width: 80px;
+    top: -38px;   
+    padding: 0.6em; 
+    color:black;
+    background-color: #7d6b8d;
+    font-size: 12px;  
+    font-family: sans-serif;
+    font-weight: bold;
+    width: 80px;
+
+}
+
+.botao{
+    padding: 0.9em;
+    position: relative;
+    left: 430px;
+    color:white;
+    background-color: #2d1346;
+    font-size: 13px; 
+    font-family: sans-serif;
+    font-weight: bold;
+    width: 80px;
+    display: flex;
+    justify-content: space-around;
+    
+}   
