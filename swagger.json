@@ -1,0 +1,103 @@
+{
+    "openapi": "3.0.0",
+  
+    "info": {
+      "title": "API JobsNet",
+      "description": "Essa é a API do projeto Banco de Currículos",
+      "version": "0.0.1"
+    },
+  
+    "servers": [
+      {
+        "url": "http://localhost:3000",
+        "description": "ambiente de desenvolvimento"
+      }
+    ],
+  
+    "paths": {
+      "/register": {
+        "post": {
+          "summary": "Cadastro de candidato",
+          "description": "Rota de cadastro de usuário, recebe: nome, genêro, email, cep e cpf",
+          "tags": ["Candidato"],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "cargo": {
+                      "type": "string"
+                    },
+                    "nascimento": {
+                      "type": "string"
+                    },
+                    "civil": {
+                      "type": "string"
+                    },
+                    "sexo": {
+                      "type": "string"
+                    },
+                    "rua": {
+                      "type": "string"
+                    },
+                    "numero": {
+                      "type": "string"
+                    },
+                    "complemento": {
+                      "type": "string"
+                    },
+                    "bairro": {
+                      "type": "string"
+                    },
+                    "cep": {
+                      "type": "string"
+                    },
+                    "cidade": {
+                      "type": "string"
+                    },
+                    "estado": {
+                      "type": "string"
+                    },
+                    "telefone": {
+                      "type": "string"
+                    },
+                    "celular": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "identidade": {
+                      "type": "string"
+                    },
+                    "cpf": {
+                      "type": "string"
+                    },
+                    "veiculo": {
+                      "type": "string"
+                    },
+                    "cnh": {
+                      "type": "string"
+                  }
+                },
+                "examples": {
+                  "eu mermo": {
+                    "value": {
+                      "name": "Pedro Sato",
+                      "gender": "Masculino Cis",
+                      "cep": "00000-000",
+                      "email": "pedro.hiro@gmail.com"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
